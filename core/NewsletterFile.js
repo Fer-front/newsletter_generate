@@ -12,6 +12,7 @@ class NewsletterFile {
      * @param  Array dataList=[]
      */
     constructor(dataList = []) {
+        this._data = dataList
     }
 
     /**
@@ -37,13 +38,13 @@ class NewsletterFile {
      * @returns blob
      * 
      */
-    static createFile(output_path, content) {
-        const fileName = NewsletterFile.composeFileName('newsletter')
+    static createFile(output_path, content, name = 'newsletter', extension = 'xml', encode = ENCODE.ISO_8859_1) {
+        const fileName = NewsletterFile.composeFileName(name, extension)
 
-        fs.appendFile(`${output_path}${fileName}`, content, ENCODE.ISO_8859_1, function (err) {
+        fs.appendFile(`${output_path}${fileName}`, content, encode, function (err) {
             if (err) throw err
 
-            console.log(`Newsletter : salvo!`)
+            console.log(`Arquivo criado com sucesso ${fileName} : salvo!`)
         })
     }
 
@@ -61,7 +62,7 @@ class NewsletterFile {
      * @returns String 
      */
     static createFolder(path, slug) {
-        const dir = `${path}uol-${slug}/`
+        const dir = `${path}${slug}/`
 
         if (!fs.existsSync(dir)) fs.mkdirSync(dir)
 
@@ -77,13 +78,21 @@ class NewsletterFile {
      * 
      * @param  Function template : obrigatorio
      * @param  String output_path
-     * @param  Function template
      */
-    createFiles(output_path, template) {
-        this._columnists.forEach((columnist) => {
+    createFiles(template, output_path = './ARQUIVOS-GERADOS/') {
+        
+        // verificacao param param obrigatorio: template
+        if(template == null || (typeof template !== 'function')) 
+            throw new Error('[Param:template] paramentro obrigatÓrio do tipo [FUNCTION]!')
+
+        // param omitido
+        if(output_path === './ARQUIVOS-GERADOS/') 
+            NewsletterFile.createFolder('./', 'ARQUIVOS-GERADOS')
+
+        this._data.forEach((obj) => {
             try {
-                const pathFolder = NewsletterFile.createFolder(output_path, columnist.slug)
-                const content = template(columnist)
+                const pathFolder = NewsletterFile.createFolder(output_path, obj.slug)
+                const content = template(obj)
 
                 NewsletterFile.createFile(pathFolder, content)
             } catch (error) {
