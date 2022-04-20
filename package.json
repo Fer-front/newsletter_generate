@@ -1,0 +1,16 @@
+{
+  "name": "newsletter_generate",
+  "version": "1.0.0",
+  "description": "Gerador de arquivos.",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://stash.uol.intranet/scm/~febarros/newsletter_generate.git"
+  },
+  "author": "Fernando J Barros",
+  "license": "ISC"
+}
