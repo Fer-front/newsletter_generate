@@ -1,12 +1,11 @@
+const { ENCODE } = require('./Enums')
 const fs = require('fs');
 
-const ENCODE = {
-    UTF8: 'utf8',
-    ASCII: 'ascii',
-    ISO_8859_1: 'binary',
-    HEX: 'hex'
-}
 
+/**
+ *  Esta classe possui metedos para contrução de 
+ *  diretorios e arquivos no encode especifico de newsletter
+ */
 class NewsletterFile {
     /**
      * @param  Array dataList=[]
@@ -67,39 +66,7 @@ class NewsletterFile {
         if (!fs.existsSync(dir)) fs.mkdirSync(dir)
 
         return dir 
-    }
-    
-    /**
-     *  Método reponsável por criar arquivos de newsletter
-     *  pasta como o nome no formato de slug e arquivo newsletter.
-     * 
-     *  @example 
-     *      ./coluna-juca/newsletter.xml
-     * 
-     * @param  Function template : obrigatorio
-     * @param  String output_path
-     */
-    createFiles(template, output_path = './ARQUIVOS-GERADOS/') {
-        
-        // verificacao param param obrigatorio: template
-        if(template == null || (typeof template !== 'function')) 
-            throw new Error('[Param:template] paramentro obrigatÓrio do tipo [FUNCTION]!')
-
-        // param omitido
-        if(output_path === './ARQUIVOS-GERADOS/') 
-            NewsletterFile.createFolder('./', 'ARQUIVOS-GERADOS')
-
-        this._data.forEach((obj) => {
-            try {
-                const pathFolder = NewsletterFile.createFolder(output_path, obj.slug)
-                const content = template(obj)
-
-                NewsletterFile.createFile(pathFolder, content)
-            } catch (error) {
-                console.error('Error : ', error)
-            }
-        });
-    }
+    }  
 }
 
 module.exports = NewsletterFile;
