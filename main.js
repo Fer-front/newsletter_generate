@@ -1,10 +1,7 @@
-const NewsletterFile = require('./core/NewsletterFile')
-const colunistTemplate = require('./templates/colunistTemplate')
 
+const { colunist } = require('./templates')
 
-// Exemplo criação de newsleter template colunista 
-
-const dados = [{
+const dadosTemplateColunista = [{
         title: 'Juliana Dal Piva',
         station: 'noticias',
         slug: 'juliana-dal-piva',
@@ -45,5 +42,5 @@ const dados = [{
     },
 ]
 
-const newsletter = new NewsletterFile(dados)
-newsletter.createFiles('/home/febarros/Área de Trabalho/ARQUIVOS_TESTE/', colunistTemplate)
+const exemploNewsletterColunista = new colunist()
+exemploNewsletterColunista.createFiles(dadosTemplateColunista)
