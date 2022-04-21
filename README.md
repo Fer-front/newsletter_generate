@@ -4,7 +4,7 @@
 
 # Newsletter generate
 
-![](.doc/images/2022-04-21-13-30-18-image.png)
+![](.doc/images/space-gradiente.png)
 
 * Gerador de arquivos de newsletter via SVN.
 
@@ -18,11 +18,11 @@
 git clone https://stash.uol.intranet/scm/~febarros/newsletter_generate.git
 ```
 
-![](.doc/images/2022-04-21-13-39-38-image.png)
+![](.doc/images/space-large.png)
 
 # Comandos npm
 
-![](.doc/images/2022-04-21-13-30-06-image.png)
+![](.doc/images/space-gradiente.png)
 
 > Para os comando abaixo funcionar deve ser rodado no mesmo nivel do arquivo **package.json**
 
@@ -38,7 +38,7 @@ npm run start
 
 
 
-![](.doc/images/2022-04-21-13-38-16-image.png)
+![](.doc/images/space.png)
 
 
 
@@ -56,7 +56,7 @@ npm run tplcreate
 
 
 
-![](.doc/images/2022-04-21-13-38-16-image.png)
+![](.doc/images/space.png)
 
 
 
@@ -68,13 +68,13 @@ npm run tplcreate
 
 **3** Registre no objeto do module.exports
 
-![](.doc/images/2022-04-21-13-21-10-image.png)
+![](.doc/images/file-index.png)
 
-![](.doc/images/2022-04-21-13-39-45-image.png)
+![](.doc/images/space-large.png)
 
 # Arquivos
 
-![](.doc/images/2022-04-21-13-30-54-image.png)
+![](.doc/images/space-gradiente.png)
 
 #### main.js
 
@@ -82,13 +82,13 @@ Este arquivo é onde será setado os dados dinamicos  e o template no qual os da
 
 Ele tambem é o responsavel pro executar processo ao rodar **npm run start**
 
-![](.doc/images/2022-04-21-13-01-27-image.png)
+![](.doc/images/file-main.png)
 
 na linha 2 pode ser procurado os templates registrados em ./templates/index.js
 
 
 
-![](.doc/images/2022-04-21-13-38-08-image.png)
+![](.doc/images/space.png)
 
 
 
@@ -100,7 +100,7 @@ O arquivo exporta a referencia da class **newsletterFile**
 
 
 
-![](.doc/images/2022-04-21-13-38-16-image.png)
+![](.doc/images/space.png)
 
 
 
@@ -121,7 +121,7 @@ extension possui um valor default = xml
 
 
 
-![](.doc/images/2022-04-21-13-38-16-image.png)
+![](.doc/images/space.png)
 
 
 
@@ -139,7 +139,7 @@ Possibilita a criação de arquivos com encode, nome, extensão especifico.
 
 
 
-![](.doc/images/2022-04-21-13-38-16-image.png)
+![](.doc/images/space.png)
 
 
 
@@ -154,7 +154,7 @@ Cria uma pasta no caminho setado em path, com o nome igual ao setado em slug.
 
 
 
-![](.doc/images/2022-04-21-13-38-28-image.png)
+![](.doc/images/space.png)
 
 
 
