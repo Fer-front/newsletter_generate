@@ -1,7 +1,7 @@
 
 const { colunist } = require('./templates')
 
-const dadosTemplateColunista = [{
+const dadosColunista = [{
         title: 'Juliana Dal Piva',
         station: 'noticias',
         slug: 'juliana-dal-piva',
@@ -43,4 +43,5 @@ const dadosTemplateColunista = [{
 ]
 
 const exemploNewsletterColunista = new colunist()
-exemploNewsletterColunista.createFiles(dadosTemplateColunista)
+exemploNewsletterColunista.createFiles(dadosColunista)
+
