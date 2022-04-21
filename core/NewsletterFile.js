@@ -1,4 +1,4 @@
-const { ENCODE } = require('./Enums')
+const { ENCODE } = require('../helps/Enums')
 const fs = require('fs');
 
 

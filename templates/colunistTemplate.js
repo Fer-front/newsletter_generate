@@ -1,4 +1,4 @@
-const ITemplate = require('../core/ITemplate')
+const ITemplate = require('../helps/ITemplate')
 const NewsletterFile = require('../core/NewsletterFile')
 
 class ColumnistTemplate extends ITemplate {
