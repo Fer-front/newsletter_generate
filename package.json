@@ -4,6 +4,7 @@
   "description": "Gerador de arquivos.",
   "main": "main.js",
   "scripts": {
+    "tplcreate": "node ./core/commandCreateTemplate.js",
     "start": "node main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
