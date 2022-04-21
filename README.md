@@ -8,9 +8,13 @@
 
 * Gerador de arquivos de newsletter via SVN.
 
+</br>
+
 ## Dependências
 
 - node e npm
+
+</br>
 
 ## Clonar o projeto:
 
@@ -61,12 +65,15 @@ npm run tplcreate
 
 
 ## Registar template
+</br>
 
 **1** Abra o arquivo **./templates/index.js**
 
 **2** Import o arquivo de template desejado da pasta **./template**
 
 **3** Registre no objeto do module.exports
+
+</br>
 
 ![](.doc/images/file-index.png)
 
@@ -76,7 +83,7 @@ npm run tplcreate
 
 ![](.doc/images/space-gradiente.png)
 
-#### main.js
+## main.js
 
 Este arquivo é onde será setado os dados dinamicos  e o template no qual os dados serão injetados.
 
@@ -106,7 +113,7 @@ O arquivo exporta a referencia da class **newsletterFile**
 
 ### Métodos staticos
 
-
+</br>
 
 **composeFileName**
 
