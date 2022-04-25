@@ -54,28 +54,8 @@ npm run start
 npm run tplcreate
 ```
 
-**2** Uma msg será exibida perguntando o nome do template digite de enter. Após isso um arquivo como o mesmo nome digitado será criado no caminho **./templates/nomeDigitado.js**
+**2** Uma msg será exibida perguntando o nome do template digite de enter. Após isso um arquivo como o mesmo nome digitado será criado no caminho **./templates/nomeDigitado.js** o mesmo arquivo tambem será registrado no arquivo **./templates/index.js**
 
-**3** Registre o template
-
-
-
-![](.doc/images/space.png)
-
-
-
-## Registar template
-</br>
-
-**1** Abra o arquivo **./templates/index.js**
-
-**2** Import o arquivo de template desejado da pasta **./template**
-
-**3** Registre no objeto do module.exports
-
-</br>
-
-![](.doc/images/file-index.png)
 
 ![](.doc/images/space-large.png)
 
